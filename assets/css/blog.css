@@ -1,0 +1,333 @@
+/* Blog Main Styles */
+.blog-main {
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.blog-hero {
+    background: linear-gradient(45deg, rgba(0, 255, 157, 0.1), rgba(108, 99, 255, 0.1));
+    padding: 4rem var(--container-padding);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blog-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+.blog-hero p {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Blog Content Layout */
+.blog-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Sidebar Styles */
+.blog-sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1rem;
+    padding-right: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: inherit;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary-light);
+}
+
+.search-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.search-btn:hover {
+    color: var(--primary-light);
+}
+
+.categories, .recent-posts {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.categories h3, .recent-posts h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.categories ul {
+    list-style: none;
+}
+
+.categories ul li {
+    margin-bottom: 0.5rem;
+}
+
+.categories ul li a {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.categories ul li a:hover {
+    color: var(--primary-light);
+}
+
+.recent-posts ul {
+    list-style: none;
+}
+
+.recent-posts ul li {
+    margin-bottom: 1rem;
+}
+
+.recent-posts ul li:last-child {
+    margin-bottom: 0;
+}
+
+.recent-posts ul li a {
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.3s ease;
+}
+
+.recent-posts ul li a:hover {
+    transform: translateX(5px);
+}
+
+.recent-posts ul li img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.recent-post-info h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.recent-post-info span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.blog-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 157, 0.1);
+}
+
+.blog-card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+    transform: scale(1.05);
+}
+
+.blog-category {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-light);
+    color: var(--darker);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.blog-card-content {
+    padding: 1.5rem;
+}
+
+.blog-card-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.blog-excerpt {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+}
+
+.read-more:hover {
+    gap: 1rem;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 3rem 0;
+}
+
+.pagination a, .pagination span {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.pagination a.active {
+    background: var(--primary-light);
+    color: var(--darker);
+}
+
+.pagination .next {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .blog-content {
+        grid-template-columns: 250px 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .blog-content {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .search-box {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-hero {
+        padding: 3rem var(--container-padding);
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-card-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-hero {
+        padding: 2rem var(--container-padding);
+    }
+
+    .blog-card-content {
+        padding: 1rem;
+    }
+
+    .blog-card-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .pagination a, .pagination span {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+} 

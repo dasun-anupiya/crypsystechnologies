@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - CRYPSYS</title>
+    <link rel="icon" type="image/png" href="assets/media/logo-white.png">
+    <link rel="stylesheet" href="assets/css/root.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="canvas-container"></div>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#clients">Clients</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <img src="assets/media/logo.png" alt="CRYPSIS">
+        </nav>
+    </header>
+
+    <main class="blog-main">
+        <section class="blog-hero">
+            <h1>Our Blog</h1>
+            <p>Insights, updates, and stories from the world of technology</p>
+        </section>
+
+        <section class="blog-content">
+            <div class="blog-sidebar">
+                <div class="search-box">
+                    <input type="text" placeholder="Search articles...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="categories">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#" data-category="all">All Posts</a></li>
+                        <li><a href="#" data-category="technology">Technology</a></li>
+                        <li><a href="#" data-category="security">Security</a></li>
+                        <li><a href="#" data-category="development">Development</a></li>
+                        <li><a href="#" data-category="iot">IoT</a></li>
+                    </ul>
+                </div>
+
+                <div class="recent-posts">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="assets/media/blog/thumb1.jpg" alt="Recent post">
+                                <div class="recent-post-info">
+                                    <h4>Future of AI in Security</h4>
+                                    <span>March 15, 2024</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/media/blog/thumb2.jpg" alt="Recent post">
+                                <div class="recent-post-info">
+                                    <h4>Web Development Trends</h4>
+                                    <span>March 10, 2024</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Blog Post Card -->
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="assets/media/blog/post1.jpg" alt="Blog post image">
+                        <div class="blog-category">Technology</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <h2>The Future of Cybersecurity</h2>
+                        <p class="blog-excerpt">Explore the latest trends and developments in cybersecurity, from AI-powered threat detection to quantum encryption.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 15, 2024</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- More blog cards... -->
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="assets/media/blog/post2.jpg" alt="Blog post image">
+                        <div class="blog-category">Development</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <h2>Modern Web Development Practices</h2>
+                        <p class="blog-excerpt">Learn about the latest tools, frameworks, and best practices in modern web development.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 10, 2024</span>
+                            <span class="blog-read-time">4 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="assets/media/blog/post3.jpg" alt="Blog post image">
+                        <div class="blog-category">IoT</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <h2>IoT Security Challenges</h2>
+                        <p class="blog-excerpt">Understanding the security challenges in the Internet of Things and how to address them.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 5, 2024</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <span>...</span>
+            <a href="#">10</a>
+            <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CRYPSYS</h3>
+                <p>Innovating the Future, Securing the Present.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about-us">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#clients">Clients</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li>Software Development</li>
+                    <li>Web Development</li>
+                    <li>IoT Solutions</li>
+                    <li>Security Solutions</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
+                    <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                    <li><i class="fas fa-envelope"></i> info@crypsys.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CRYPSYS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+    <script src="assets/js/three-scene.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+</html>

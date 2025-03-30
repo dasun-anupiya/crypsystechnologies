@@ -1,0 +1,242 @@
+/* Team Page Styles */
+.team-hero {
+    padding: 150px var(--container-padding) 80px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    position: relative;
+    overflow: hidden;
+}
+
+.team-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../media/team/hero-bg.jpg') center/cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.team-hero .section-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.team-hero .section-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.team-hierarchy {
+    padding: 80px var(--container-padding);
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.team-hierarchy > div {
+    margin-bottom: 4rem;
+}
+
+.team-hierarchy h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.team-hierarchy h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--primary-light);
+    border-radius: 3px;
+}
+
+.team-member {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-light);
+    box-shadow: 0 10px 30px rgba(0, 255, 157, 0.1);
+}
+
+.member-image {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.member-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.team-member:hover .member-info {
+    transform: translateY(0);
+}
+
+.member-info h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-info .position {
+    color: var(--primary-light);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.member-info .bio {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.member-details {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.member-details p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-details strong {
+    color: var(--primary-light);
+}
+
+/* Scrollbar Styles for Member Info */
+.member-info::-webkit-scrollbar {
+    width: 6px;
+}
+
+.member-info::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.member-info::-webkit-scrollbar-thumb {
+    background: var(--primary-light);
+    border-radius: 3px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .team-hero {
+        padding: 120px var(--container-padding) 60px;
+    }
+
+    .team-hero .section-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .team-hierarchy {
+        padding: 60px var(--container-padding);
+    }
+
+    .team-hierarchy h2 {
+        font-size: 1.75rem;
+    }
+
+    .member-image {
+        height: 300px;
+    }
+
+    .member-info {
+        position: relative;
+        transform: none;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1.5rem;
+    }
+
+    .team-member:hover .member-info {
+        transform: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-hero {
+        padding: 100px var(--container-padding) 40px;
+    }
+
+    .team-hero .section-header h1 {
+        font-size: 2rem;
+    }
+
+    .team-hero .section-header p {
+        font-size: 1rem;
+    }
+
+    .team-hierarchy {
+        padding: 40px var(--container-padding);
+    }
+
+    .team-hierarchy h2 {
+        font-size: 1.5rem;
+    }
+
+    .member-image {
+        height: 250px;
+    }
+
+    .member-info {
+        padding: 1rem;
+    }
+
+    .member-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .member-info .position {
+        font-size: 0.9rem;
+    }
+
+    .member-info .bio {
+        font-size: 0.85rem;
+    }
+
+    .member-details p {
+        font-size: 0.8rem;
+    }
+} 
